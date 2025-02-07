@@ -8,6 +8,8 @@
 /* Table of Xinu shell commands and the function associated with each	*/
 /************************************************************************/
 const	struct	cmdent	cmdtab[] = {
+	{"greet",	xsh_greet},
+	{"hello",	xsh_hello},
 	{"argecho",	xsh_argecho},
 	{"arp",		xsh_arp},
 	{"cat",		xsh_cat},
@@ -133,7 +135,9 @@ process	shell (
 		SHELL_BAN0,SHELL_BAN1,SHELL_BAN2,SHELL_BAN3,SHELL_BAN4,
 		SHELL_BAN5,SHELL_BAN6,SHELL_BAN7,SHELL_BAN8,SHELL_BAN9);
 
-	fprintf(dev, "%s\n\n", SHELL_STRTMSG);
+	// fprintf(dev, "%s\n\n", SHELL_STRTMSG);
+	char *args[] = {"greet", "Shohag"};
+	xsh_greet(2, args);
 
 	/* Continually prompt the user, read input, and execute command	*/
 

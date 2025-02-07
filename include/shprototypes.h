@@ -1,3 +1,7 @@
+/* lab class tutorials */
+extern	shellcmd  xsh_greet	(int32 nargs, char *args[]);
+extern	shellcmd  xsh_hello	(int32 nargs, char *args[]);
+
 /* in file xsh_argecho.c */
 extern	shellcmd  xsh_argecho	(int32, char *[]);
 
